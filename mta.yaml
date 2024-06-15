@@ -25,8 +25,8 @@ modules:
           ServiceInstanceName: comsaptrialfioriai-html5-srv
           ServiceKeyName: comsaptrialfioriai-repo-host-key
           sap.cloud.service: comsaptrialfioriai
-        - Authentication: OAuth2UserTokenExchange
-          Name: comsaptrialfioriai_uaa
+        - Name: comsaptrialfioriai_uaa
+          Authentication: OAuth2UserTokenExchange
           ServiceInstanceName: comsaptrialfioriai-xsuaa-srv
           ServiceKeyName: comsaptrialfioriai-uaa-key
           sap.cloud.service: comsaptrialfioriai
