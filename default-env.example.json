@@ -1,0 +1,28 @@
+{
+  "VCAP_SERVICES": {
+    "destination": [
+      {
+        "credentials": {
+          "clientid": "<CLIENT_ID>",
+          "clientsecret": "<CLIENT_SECRET>",
+          "url": "<AUTH_URL>",
+          "uri": "<DESTINATION_URI>"
+        },
+        "label": "destination",
+        "name": "<INSTANCE_NAME>",
+        "tags": ["destination", "conn", "connsvc"]
+      }
+    ],
+    "xsuaa": [
+      {
+        "credentials": {
+          "clientid": "<CLIENT_ID>",
+          "clientsecret": "<CLIENT_SECRET>",
+          "url": "<AUTH_URL>"
+        },
+        "label": "xsuaa",
+        "tags": ["xsuaa"]
+      }
+    ]
+  }
+}
