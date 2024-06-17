@@ -1,10 +1,59 @@
 <mvc:View controllerName="com.sap.trial.fioriai.controller.MainView"
-    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:f="sap.f" displayBlock="true"
     xmlns="sap.m">
-    <Page id="page" title="{i18n>title}">
-        <content >
-            <Button id="btnGenSummary" text="Summary" press="onBtnSummaryPress"/>
-            <Text id="txtSummary" text=""></Text>
-        </content>
-    </Page>
+    <f:DynamicPage stickySubheaderProvider="iconTabBar" class="sapUiNoContentPadding">
+        <f:title>
+            <f:DynamicPageTitle>
+                <f:heading>
+                    <Title text="AI with Fiori"/>
+                </f:heading>
+            </f:DynamicPageTitle>
+        </f:title>
+        <f:content>
+            <IconTabBar id="iconTabBar" class="sapUiResponsiveContentPadding" stretchContentHeight="true" expanded="true" expandable="false">
+                <items>
+                    <IconTabFilter text="Summarizer">
+                        <VBox>
+                            <TextArea value="{ui>/summary/txtInput}" width="100%" height="20rem" growing="true" editable="{= !${ui>/busy}}" busyIndicatorDelay="0"/>
+                            <HBox direction="RowReverse">
+                                <Button id="btnGenSummary" type="Emphasized" icon="sap-icon://ai" text="Summarize" press="onBtnSummaryPress" busy="{ui>/busy}" busyIndicatorDelay="0"/>
+                            </HBox>
+                            <Label text="Text Summary" class="sapUiSmallMarginTop" />
+                            <TextArea value="{ui>/summary/txtSummary}" editable="false" width="100%" growing="true"/>
+                        </VBox>
+                    </IconTabFilter>
+                    <IconTabFilter text="Chatbot">
+                        <VBox>
+                        	<ScrollContainer height="100%" width="100%" vertical="true" focusable="true">
+                                <VBox items="{ui>/chatbot/messages}">
+                                    <VBox>
+                                        <HBox visible="{= ${ui>role} === 'assistant'}" direction="Row" class="sapUiSmallMarginTopBottom">
+                                            <HBox backgroundDesign="Solid" class="chatBubble sapUiResponsivePadding" >
+                                                <core:Icon decorative="true" src="sap-icon://ai" class="sapUiTinyMarginEnd" />
+                                                <Text text="{ui>content}"/>
+                                            </HBox>
+                                        </HBox>
+                                        <HBox visible="{= ${ui>role} === 'user'}" direction="RowReverse" class="sapUiSmallMarginTopBottom">
+                                            <HBox direction="RowReverse" backgroundDesign="Solid" class="chatBubble sapUiResponsivePadding sapThemeBrand-asBackgroundColor" >
+                                                <core:Icon decorative="true" src="sap-icon://customer" class="sapUiTinyMarginBegin sapThemeTextInverted" />
+                                                <Text class="sapThemeTextInverted" text="{ui>content}"/>
+                                            </HBox>
+                                        </HBox>
+                                    </VBox>
+                                </VBox>
+                            </ScrollContainer>
+                            <HBox class="sapUiSmallMarginTop">
+                                <TextArea value="{ui>/chatbot/txtInput}" width="100%" growing="true" editable="{= !${ui>/busy}}" busyIndicatorDelay="0">
+                                	<layoutData>
+                                        <FlexItemData growFactor="1" />
+                                    </layoutData>
+                                </TextArea>
+                                <Button class="sapUiTinyMarginBegin" type="Emphasized" icon="sap-icon://paper-plane" text="Send" press="onBtnChatbotSendPress" busy="{ui>/busy}" busyIndicatorDelay="0"/>
+                            </HBox>
+                        </VBox>
+                    </IconTabFilter>
+                </items>
+            </IconTabBar>
+        </f:content>
+    </f:DynamicPage>
 </mvc:View>

@@ -1,1 +1,7 @@
 /* Enter your custom styles here */
+
+.chatBubble {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: 0.75rem;
+}
