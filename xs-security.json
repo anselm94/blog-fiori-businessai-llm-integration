@@ -3,5 +3,11 @@
   "tenant-mode": "dedicated",
   "description": "Security profile of called application",
   "scopes": [],
-  "role-templates": []
+  "role-templates": [],
+  "oauth2-configuration": {
+    "redirect-uris": [
+      "https://*.trial.applicationstudio.cloud.sap/**",
+      "http://localhost:8080/**"
+    ]
+  }
 }
