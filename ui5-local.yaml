@@ -34,3 +34,9 @@ server:
       configuration:
         component: com.sap.trial.fioriai
         ui5Theme: sap_horizon
+    - name: ui5-middleware-approuter
+      afterMiddleware: compression
+      configuration:
+        authenticationMethod: "route"
+        xsappJson: "./xs-app.json"
+        appendAuthRoute: true # trigger auth, inorder to connect to destination service

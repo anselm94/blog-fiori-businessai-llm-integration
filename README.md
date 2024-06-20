@@ -1,6 +1,28 @@
-# Blog Sample - Integrate Fiori UIs with SAP GenAI Hub - LLMs
+# Integrate Fiori UIs with SAP GenAI Hub - LLMs
 
 This repository demonstrates how to **integrate** Fiori UIs (Freestyle, Fiori Elements, Flexible Programming Model) with LLMs in SAP GenAI Hub in a **Secured way** using **BTP Destination Service**.
+
+## Blog
+
+1. [Integrating AI with SAPUI5 Fiori Apps: Part 1 - Concept](https://community.sap.com/t5/technology-blogs-by-sap/integrating-ai-with-sapui5-fiori-apps-part-1-concept/ba-p/13734579)
+2. [Integrating AI with SAPUI5 Fiori Apps: Part 2 - Building a Text Summarizer](https://community.sap.com/t5/technology-blogs-by-sap/integrating-ai-with-sapui5-fiori-apps-part-2-building-a-text-summarizer/ba-p/13736465)
+3. [Integrating AI with SAPUI5 Fiori Apps: Part 3 - Building an AI Chatbot Assistant](https://community.sap.com/t5/technology-blogs-by-sap/integrating-ai-with-sapui5-fiori-apps-part-3-building-an-ai-chatbot/ba-p/13736501)
+
+## Demos
+
+![AI Text Summariser](./docs/ai-text-summariser.gif)
+
+*AI Text Summariser*
+
+![AI Assistant Chatbot](./docs/ai-assistant-chatbot.gif)
+
+*AI Assistant Chatbot*
+
+## BTP Solution
+
+![BTP Solution - SAPUI5 Fiori integration with LLM via SAP AI Core](./docs/solution.png)
+
+*BTP Solution - SAPUI5 Fiori integration with LLM via SAP AI Core*
 
 ## Prerequisites
 
