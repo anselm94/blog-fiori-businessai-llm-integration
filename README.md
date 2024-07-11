@@ -44,7 +44,7 @@ This repository demonstrates how to **integrate** Fiori UIs (Freestyle, Fiori El
    Authentication: OAuth2ClientCredentials
    Client ID: <CLIENT_ID>
    Client Secret: <CLIENT_SECRET>
-   Token Service Url: <TOKEN_URL>/oauth2/token
+   Token Service Url: <TOKEN_URL>/oauth/token
 
    ## Additional Properties
    HTML5.DynamicDestination: true
